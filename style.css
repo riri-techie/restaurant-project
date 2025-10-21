@@ -1,0 +1,346 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/*      COLOR PALETTE SETUP      */
+/* ============================= */
+:root {
+  --primary-green: #415D2E;   /* Deep Olive Green */
+  --olive-light: #7E9A56;     /* Muted light green accent */
+  --beige: #F7F3E9;           /* Warm creamy background */
+  --gold: #C8A15A;            /* Luxurious gold highlight */
+  --white: #FFFFFF;           /* Soft white */
+  --black: #1C1C1C;           /* Rich charcoal black */
+  --text: #3E3E3E;            /* Gentle dark text */
+}
+
+/* ============================= */
+/*         GLOBAL STYLING        */
+/* ============================= */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--beige);
+}
+
+/* ============================= */
+/*       HEADER & NAVBAR         */
+/* ============================= */
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+  padding: 25px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(200, 161, 90, 0.4);
+}
+
+/* Navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--beige);
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  
+}
+
+nav a:hover {
+  background-color: var(--gold);
+  color: var(--black);
+  
+}
+
+/* ============================= */
+/*          HERO SECTION         */
+/* ============================= */
+.hero {
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+}
+.contact{
+  background:url(https://marianorestaurant.com/wp-content/themes/restaurant-recipe/assets/img/restaurant-recipe-inner-banner-1920-600.jpg)no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  text-align: center;
+  position: relative;}
+
+.hero-content {
+  background-color: rgba(28, 28, 28, 0.6);
+  color: var(--beige);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: var(--beige);
+}
+
+/* ============================= */
+/*          MENU PAGE            */
+/* ============================= */
+.menu-page {
+  background-color: var(--beige);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.menu-title {
+  font-size: 2.5em;
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.menu-sub {
+  color: var(--text);
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+/* Menu sections */
+.menu-section {
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+/* Section titles */
+.menu-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Background gradients */
+.lunch {
+  background: linear-gradient(to bottom right, #f9f5ea, #efe6d9);
+}
+
+.drinks {
+  background: linear-gradient(to bottom right, #e4eadf, #f7f3e9);
+}
+
+.dinner {
+  background: linear-gradient(to bottom right, #f1e6c9, #faf7ee);
+}
+
+.desserts {
+  background: linear-gradient(to bottom right, #e8d5b7, #f7f3e9);
+}
+
+/* ============================= */
+/*        MENU ITEM CARDS        */
+/* ============================= */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.menu-item {
+  width: 280px;
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  color: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 15px;
+}
+
+.menu-item h4,
+.menu-item p {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-item h4 {
+  font-size: 1.2em;
+  color: var(--gold);
+}
+
+.menu-item p {
+  font-size: 0.9em;
+  color: var(--beige);
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================= */
+/*          ABOUT + CONTACT      */
+/* ============================= */
+.about p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1em;
+  color: var(--text);
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* ============================= */
+/*            FOOTER             */
+/* ============================= */
+footer {
+  background-color: var(--black);
+  color: var(--beige);
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid var(--gold);
+  font-size: 0.9em;
+}
+
+h2 {
+  text-align: center;
+  color:#C8A15A;
+}
+
+h4 {
+  color: var(--gold);
+  font-family: 'Times New Roman', Times, serif;
+}
+/* ============================= */
+/*          ABOUT PAGE           */
+/* ============================= */
+.about-section {
+  background-color: var(--beige);
+  padding: 100px 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  background: linear-gradient(to bottom right, #a38a46, #efe6d9);
+  
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE SIDE */
+.about-image {
+  flex: 1 1 50%;
+  min-height: 400px;
+  min-width: 1000px;
+  background: url("https://justcook.butcherbox.com/wp-content/uploads/2019/11/Perfect-Pan-Seared-Ribeye-Steak.jpg" ) no-repeat center;
+  
+  background-color: #000; /* fills gaps around image */
+}
+#abt{
+  color: rgb(153, 153, 54);
+}
+  display: flex;
+  
+  position: relative;  }
+
+/* TEXT SIDE */
+.about-content {
+  flex: 1 1 50%;
+  padding: 60px;
+  background-color: var(--black);
+  color: var(--beige);
+}
+
+.about-content h2 {
+  font-size: 2.5em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.about-content h3 {
+  font-size: 1.5em;
+  color: var(--olive-light);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-btn {
+  padding: 12px 28px;
+  background-color: var(--gold);
+  color: var(--black);
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: var(--olive-light);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+#cont{
+  color: black;
+}
